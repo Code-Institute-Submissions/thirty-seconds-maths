@@ -14,7 +14,7 @@ function runGame() {
         generateMultiplicationNumbers();
     }
 
-    
+
 }
 
 
@@ -26,12 +26,14 @@ function generateAdditionNumbers() {
     aNum1 = Math.floor(Math.random() * 50) + 1;
     aNum2 = Math.floor(Math.random() * 50) + 1;
 
-    return [aNum1, aNum2];
+    document.getElementById("operand1").textContent = aNum1;
+    document.getElementById("operand2").textContent = aNum2;
+
 }
 
 
 /**
- * Generates two random numbers between 1 and 10 and returns an array with them 
+ * Generates two random numbers between 1 and 10 and stores them in operand elements 
  */
 function generateMultiplicationNumbers() {
 
@@ -72,11 +74,4 @@ function calculateResult() {
     }
         
     return result;
-}
-
-
-
-
-
-
 }
