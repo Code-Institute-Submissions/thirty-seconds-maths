@@ -1,13 +1,34 @@
 let checkAnswerButton = document.getElementById("check-answer");
 
 checkAnswerButton.addEventListener('click', function() {
+
   checkAnswer();
+  
+});
+
+let startGameButton = document.getElementById("start-game");
+
+startGameButton.addEventListener('click', function() {
+
+    startGameButton.style.display = "none";
+    runGame();
+
+});
+
+
+document.getElementById("answer-input").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        checkAnswer();
+    }
 });
   
 /**
  * Runs the game
  */
 function runGame() {
+    
+
+    startTimer();
     
     generateRandomOperator();
     let generatedOperator = document.getElementById("operator").textContent;
@@ -125,4 +146,24 @@ function restartGame() {
 
     document.getElementById("score").textContent = "0";
     runGame();
+}
+
+
+
+function startTimer() {
+    
+    let timeLeft = 50;
+    let timerElement = document.getElementById("timer");
+    timerElement.textContent = timeLeft;
+    
+    let countdown = setInterval(function() {
+    timeLeft--;
+    timerElement.textContent = timeLeft;
+
+    if (timeLeft === 0) {
+      clearInterval(countdown);
+      alert("Time's up! You lost the game!");
+      restartGame();
+    }
+  }, 1000);
 }
