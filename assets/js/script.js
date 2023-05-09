@@ -90,7 +90,9 @@ function calculateResult() {
 
 
 /**
- * Checks user answer and increases and decreases score
+ * Checks user answer and increases or decreases score
+ * Clear input field after it
+ * Sets cursor back to input field
  */
 function checkAnswer() {
     
@@ -106,6 +108,15 @@ function checkAnswer() {
         document.getElementById("score").textContent = score;
     }
 
-    runGame();
+    document.getElementById("answer-input").value = "";
+    document.getElementById("answer-input").focus();
+
+    let currentScore = parseInt(document.getElementById("score").textContent);
+
+    if (currentScore === 10) {
+        alert("CONGRATS! You won the game!")
+    } else {
+        runGame();
+    }
     
 }
