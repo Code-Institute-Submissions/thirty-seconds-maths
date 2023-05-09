@@ -144,14 +144,14 @@ function restartGame() {
 
     document.getElementById("score").textContent = "0";
     document.getElementById("start-game").style.display = "block";
-    document.getElementById("timer").textContent = "50";
+    document.getElementById("timer").textContent = "30";
 }
 
 
 
 function startTimer() {
     
-    let timeLeft = 50;
+    let timeLeft = 30;
     let timerElement = document.getElementById("timer");
     timerElement.textContent = timeLeft;
     
