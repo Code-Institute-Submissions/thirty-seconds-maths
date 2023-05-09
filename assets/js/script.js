@@ -1,10 +1,4 @@
-let checkAnswerButton = document.getElementById("check-answer");
 
-checkAnswerButton.addEventListener('click', function() {
-
-  checkAnswer();
-
-});
 
 let startGameButton = document.getElementById("start-game");
 
@@ -14,6 +8,12 @@ startGameButton.addEventListener('click', function() {
     startTimer();
     runGame();
 
+});
+
+let checkAnswerButton = document.getElementById("check-answer");
+    
+checkAnswerButton.addEventListener('click', function() {
+    checkAnswer();
 });
 
 
@@ -27,6 +27,8 @@ document.getElementById("answer-input").addEventListener("keydown", function (ev
  * Runs the game
  */
 function runGame() {
+
+    checkAnswerButton.style.display = "block";
     
     generateRandomOperator();
     let generatedOperator = document.getElementById("operator").textContent;
