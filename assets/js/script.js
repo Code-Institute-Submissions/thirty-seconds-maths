@@ -15,7 +15,7 @@ function generateAdditionNumbers() {
 function generateMultiplicationNumbers() {
 
     mNum1 = Math.floor(Math.random() * 10) + 1;
-    mNum1 = Math.floor(Math.random() * 10) + 1;
+    mNum2 = Math.floor(Math.random() * 10) + 1;
 
     return [mNum1, mNum2];
 }
