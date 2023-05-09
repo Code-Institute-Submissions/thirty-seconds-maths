@@ -143,7 +143,8 @@ function checkAnswer() {
 function restartGame() {
 
     document.getElementById("score").textContent = "0";
-    runGame();
+    document.getElementById("start-game").style.display = "block";
+    document.getElementById("timer").textContent = "50";
 }
 
 
