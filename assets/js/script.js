@@ -1,3 +1,23 @@
+let startButton = document.getElementById("start-game");
+
+startButton.addEventListener('click', function() {
+  runGame();
+});
+
+function runGame() {
+
+    let generatedOperator = generateRandomOperator();
+
+    if (generatedOperator === "+") {
+        generateAdditionNumbers();
+    } else {
+        generateMultiplicationNumbers();
+    }
+
+    
+}
+
+
 /**
  * Generates two random numbers between 1 and 50 and returns an array with them
  */
@@ -34,6 +54,9 @@ function generateRandomOperator() {
 }
 
 
+/**
+ * Calculates correct result of the question
+ */
 function calculateResult() {
     
     let operand1 = parseInt(document.getElementById("operand1").textContent);
