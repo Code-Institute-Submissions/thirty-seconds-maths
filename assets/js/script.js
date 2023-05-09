@@ -10,7 +10,9 @@ checkAnswerButton.addEventListener('click', function() {
   checkAnswer();
 });
   
-
+/**
+ * Runs the game
+ */
 function runGame() {
     
     generateRandomOperator();
@@ -21,8 +23,6 @@ function runGame() {
     } else {
         generateMultiplicationNumbers();
     }
-
-    
 
 }
 
@@ -88,6 +88,9 @@ function calculateResult() {
 }
 
 
+/**
+ * Checks user answer and increases and decreases score
+ */
 function checkAnswer() {
     
     let userAnswer = parseInt(document.getElementById("answer-input").value);
