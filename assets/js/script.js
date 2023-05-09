@@ -9,6 +9,7 @@ function generateAdditionNumbers() {
     return [aNum1, aNum2];
 }
 
+
 /**
  * Generates two random numbers between 1 and 10 and returns an array with them 
  */
@@ -18,4 +19,16 @@ function generateMultiplicationNumbers() {
     mNum2 = Math.floor(Math.random() * 10) + 1;
 
     return [mNum1, mNum2];
+}
+
+
+/**
+ * Generates either "+" or "-"
+ */
+function generateRandomOperator() {
+
+    randomNumber = Math.floor();
+
+    return randomNumber < 0.5 ? "+" : "-";
+
 }
