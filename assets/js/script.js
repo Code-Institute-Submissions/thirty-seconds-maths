@@ -5,8 +5,9 @@ startButton.addEventListener('click', function() {
 });
 
 function runGame() {
-
-    let generatedOperator = generateRandomOperator();
+    
+    generateRandomOperator();
+    let generatedOperator = document.getElementById("operator").textContent;
 
     if (generatedOperator === "+") {
         generateAdditionNumbers();
@@ -14,12 +15,11 @@ function runGame() {
         generateMultiplicationNumbers();
     }
 
-
 }
 
 
 /**
- * Generates two random numbers between 1 and 50 and returns an array with them
+ * Generates two random numbers between 1 and 50 and stores them in operand elements
  */
 function generateAdditionNumbers() {
 
@@ -40,7 +40,9 @@ function generateMultiplicationNumbers() {
     mNum1 = Math.floor(Math.random() * 10) + 1;
     mNum2 = Math.floor(Math.random() * 10) + 1;
 
-    return [mNum1, mNum2];
+    document.getElementById("operand1").textContent = mNum1;
+    document.getElementById("operand2").textContent = mNum2;
+
 }
 
 
@@ -48,11 +50,10 @@ function generateMultiplicationNumbers() {
  * Generates either "+" or "-"
  */
 function generateRandomOperator() {
-
-    randomNumber = Math.floor();
-
-    return randomNumber < 0.5 ? "+" : "-";
-
+    let randomNumber = Math.random();
+    let randomOperator = randomNumber < 0.5 ? "+" : "*";
+    document.getElementById("operator").textContent = randomOperator;
+    return randomOperator;
 }
 
 
