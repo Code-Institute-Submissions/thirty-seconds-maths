@@ -4,6 +4,13 @@ startButton.addEventListener('click', function() {
   runGame();
 });
 
+let checkAnswerButton = document.getElementById("check-answer");
+
+checkAnswerButton.addEventListener('click', function() {
+  checkAnswer();
+});
+  
+
 function runGame() {
     
     generateRandomOperator();
@@ -15,7 +22,10 @@ function runGame() {
         generateMultiplicationNumbers();
     }
 
+    
+
 }
+
 
 
 /**
@@ -75,4 +85,23 @@ function calculateResult() {
     }
         
     return result;
+}
+
+
+function checkAnswer() {
+    
+    let userAnswer = parseInt(document.getElementById("answer-input").value);
+    let correctAnswer = calculateResult();
+    let score = parseInt(document.getElementById("score").textContent);
+
+    if (userAnswer === correctAnswer) {
+        score++;
+        document.getElementById("score").textContent = score;
+    } else {
+        score--;
+        document.getElementById("score").textContent = score;
+    }
+
+    runGame();
+    
 }
