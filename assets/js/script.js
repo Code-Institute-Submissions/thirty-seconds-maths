@@ -1,10 +1,3 @@
-let startButton = document.getElementById("start-game");
-
-startButton.addEventListener('click', function() {
-    startButton.style.display = "none";
-    runGame();
-});
-
 let checkAnswerButton = document.getElementById("check-answer");
 
 checkAnswerButton.addEventListener('click', function() {
@@ -115,8 +108,19 @@ function checkAnswer() {
 
     if (currentScore === 10) {
         alert("CONGRATS! You won the game!")
+        restartGame();
     } else {
         runGame();
     }
     
+}
+
+/**
+ * Sets score to 0
+ * Runs runGame function to start over
+ */
+function restartGame() {
+
+    document.getElementById("score").textContent = "0";
+    runGame();
 }
