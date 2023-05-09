@@ -32,3 +32,28 @@ function generateRandomOperator() {
     return randomNumber < 0.5 ? "+" : "-";
 
 }
+
+
+function calculateResult() {
+    
+    let operand1 = parseInt(document.getElementById("operand1").textContent);
+    let operator = document.getElementById("operator").textContent;
+    let operand2 = parseInt(document.getElementById("operand2").textContent);
+        
+    let result;
+        
+    if (operator === "+") {
+        result = operand1 + operand2;
+    } else if (operator === "*") {
+        result = operand1 * operand2;
+    }
+        
+    return result;
+}
+
+
+
+
+
+
+}
