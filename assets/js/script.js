@@ -54,9 +54,11 @@ function generateMultiplicationNumbers() {
  * Generates either "+" or "-"
  */
 function generateRandomOperator() {
+
     let randomNumber = Math.random();
     let randomOperator = randomNumber < 0.5 ? "+" : "*";
     document.getElementById("operator").textContent = randomOperator;
+    
     return randomOperator;
 }
 
