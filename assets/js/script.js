@@ -1,7 +1,8 @@
 let startButton = document.getElementById("start-game");
 
 startButton.addEventListener('click', function() {
-  runGame();
+    startButton.style.display = "none";
+    runGame();
 });
 
 let checkAnswerButton = document.getElementById("check-answer");
