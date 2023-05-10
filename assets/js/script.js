@@ -1,5 +1,3 @@
-
-
 let startGameButton = document.getElementById("start-game");
 
 startGameButton.addEventListener('click', function() {
@@ -151,6 +149,10 @@ function restartGame() {
 
 
 
+ /**
+  * Starts a countdown timer for 30 seconds and displays the remaining time on the page
+  * If the timer reaches zero, the function alerts the user that time is up and calls the 'restartGame()' function
+  */
 function startTimer() {
     
     let timeLeft = 30;
