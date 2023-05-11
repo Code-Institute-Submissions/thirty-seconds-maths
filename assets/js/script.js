@@ -128,7 +128,7 @@ function checkAnswer() {
     let currentScore = parseInt(document.getElementById("score").textContent);
 
     if (currentScore === 10) {
-        alert("CONGRATS! You won the game!")
+        document.getElementById("info-board").textContent = "Congratulations! You won."
         restartGame();
     } else {
         runGame();
