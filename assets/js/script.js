@@ -37,10 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * Runs the game
  */
 function runGame() {
-
-    startTimer();
-
-
+    
     document.getElementById("check-answer-btn").style.display = "block";
 
     generateRandomOperator();
@@ -145,6 +142,7 @@ function checkAnswer() {
     let currentScore = parseInt(document.getElementById("score").textContent);
 
     if (currentScore === 10) {
+        clearInterval(countdown);
         document.getElementById("info-board").textContent = "Congratulations! You won."
         document.getElementById("check-answer-btn").style.display = "none";
         document.getElementById("reset-btn").style.display = "block";
@@ -158,6 +156,9 @@ function checkAnswer() {
  * Starts a countdown timer for 30 seconds and displays the remaining time on the page
  * If the timer reaches zero, the function alerts the user that time is up and calls the 'restartGame()' function
  */
+
+let countdown;
+
 function startTimer() {
 
     let timeLeft = 30;
