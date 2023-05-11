@@ -1,5 +1,6 @@
-let startGameButton = document.getElementById("start-game-btn");
+document.addEventListener("DOMContentLoaded", function () {
 
+let startGameButton = document.getElementById("start-game-btn");
 startGameButton.addEventListener('click', function() {
 
     startGameButton.style.display = "none";
@@ -9,11 +10,10 @@ startGameButton.addEventListener('click', function() {
 });
 
 let checkAnswerButton = document.getElementById("check-answer-btn");
-    
-checkAnswerButton.addEventListener('click', function() {
+     
+    checkAnswerButton.addEventListener('click', function() {
     checkAnswer();
 });
-
 
 document.getElementById("answer-input").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
@@ -21,12 +21,19 @@ document.getElementById("answer-input").addEventListener("keydown", function (ev
     }
 });
   
+
+
+})
+
+
+
+
 /**
  * Runs the game
  */
 function runGame() {
 
-    checkAnswerButton.style.display = "block";
+    document.getElementById("check-answer-btn").style.display = "block";
     
     generateRandomOperator();
     let generatedOperator = document.getElementById("operator").textContent;
@@ -113,6 +120,8 @@ function checkAnswer() {
     let userAnswer = parseInt(document.getElementById("answer-input").value);
     let correctAnswer = calculateResult();
     let score = parseInt(document.getElementById("score").textContent);
+
+
 
     if (userAnswer === correctAnswer) {
         score++;
