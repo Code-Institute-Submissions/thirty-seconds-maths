@@ -99,7 +99,7 @@ h1 {
     border: 2px solid #333;
 }
 
-button {
+#start-game-btn {
     width: 150px;
     height: 50px;
     border: none;
@@ -118,15 +118,25 @@ button {
 }
 
 
-#start-game:hover {
+#start-game-btn:hover {
     background-color: #005ad1;
 }
 
-#check-answer {
+#check-answer-btn {
+
+    display: none;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
     background-color: #333;
 }
 
-#check-answer:hover {
+#check-answer-btn:hover {
     background-color: #222;
 }
 

@@ -1,4 +1,4 @@
-let startGameButton = document.getElementById("start-game");
+let startGameButton = document.getElementById("start-game-btn");
 
 startGameButton.addEventListener('click', function() {
 
@@ -8,7 +8,7 @@ startGameButton.addEventListener('click', function() {
 
 });
 
-let checkAnswerButton = document.getElementById("check-answer");
+let checkAnswerButton = document.getElementById("check-answer-btn");
     
 checkAnswerButton.addEventListener('click', function() {
     checkAnswer();
@@ -129,8 +129,8 @@ function checkAnswer() {
 
     if (currentScore === 10) {
         document.getElementById("info-board").textContent = "Congratulations! You won."
-        document.getElementById("start-game").style = "block";
-        document.getElementById("check-answer").style.display = "none";
+        document.getElementById("start-game-btn").style = "block";
+        document.getElementById("check-answer-btn").style.display = "none";
         restartGame();
     } else {
         runGame();
@@ -169,11 +169,11 @@ function startTimer() {
     if (timeLeft === 0) {
       clearInterval(countdown);
       document.getElementById("info-board").textContent = "Time's up! You lost.";
-      document.getElementById("start-game").style = "block";
-      document.getElementById("start-game").textContent = "Play again";
+      document.getElementById("start-game-btn").style = "block";
+      document.getElementById("start-game-btn").textContent = "Play again";
 
-      document.getElementById("start-game").style = "block";
-      document.getElementById("check-answer").style.display = "none";
+      document.getElementById("start-game-btn").style = "block";
+      document.getElementById("check-answer-btn").style.display = "none";
       
       restartGame();
     }
