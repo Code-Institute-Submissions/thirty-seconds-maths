@@ -130,6 +130,7 @@ function checkAnswer() {
     if (currentScore === 10) {
         document.getElementById("info-board").textContent = "Congratulations! You won."
         document.getElementById("start-game").style = "block";
+        document.getElementById("check-answer").style.display = "none";
         restartGame();
     } else {
         runGame();
@@ -170,6 +171,9 @@ function startTimer() {
       document.getElementById("info-board").textContent = "Time's up! You lost.";
       document.getElementById("start-game").style = "block";
       document.getElementById("start-game").textContent = "Play again";
+
+      document.getElementById("start-game").style = "block";
+      document.getElementById("check-answer").style.display = "none";
       
       restartGame();
     }
