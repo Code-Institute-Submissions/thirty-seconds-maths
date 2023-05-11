@@ -129,6 +129,7 @@ function checkAnswer() {
 
     if (currentScore === 10) {
         document.getElementById("info-board").textContent = "Congratulations! You won."
+        document.getElementById("start-game").style = "block";
         restartGame();
     } else {
         runGame();
@@ -141,7 +142,8 @@ function checkAnswer() {
  * Runs runGame function to start over
  */
 function restartGame() {
-
+    
+    document.getElementById("info-Board").textContent(" seconds left");
     document.getElementById("score").textContent = "0";
     document.getElementById("start-game").style.display = "block";
     document.getElementById("timer").textContent = "30";
@@ -166,6 +168,7 @@ function startTimer() {
     if (timeLeft === 0) {
       clearInterval(countdown);
       document.getElementById("info-board").textContent = "Time's up! You lost.";
+      document.getElementById("start-game").style = "block";
       document.getElementById("start-game").textContent = "Play again";
       
       restartGame();
