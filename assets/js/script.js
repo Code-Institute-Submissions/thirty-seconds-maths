@@ -165,8 +165,9 @@ function startTimer() {
 
     if (timeLeft === 0) {
       clearInterval(countdown);
-      infoBoard = document.getElementById("info-board");
-      infoBoard.textContent = "Time's up! You lost."
+      document.getElementById("info-board").textContent = "Time's up! You lost.";
+      document.getElementById("start-game").textContent = "Play again";
+      
       restartGame();
     }
   }, 1000);
