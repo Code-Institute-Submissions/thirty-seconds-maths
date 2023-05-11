@@ -141,6 +141,24 @@ h1 {
     background-color: #222;
 }
 
+#reset-btn {
+
+    display: none;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+}
+
+#reset-btn:hover {
+    background-color: #222;
+}
+
 #timer-area, #score-area {
     display: flex;
     justify-content: center;

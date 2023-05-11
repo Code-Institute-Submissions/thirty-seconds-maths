@@ -1,26 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
 
-let startGameButton = document.getElementById("start-game-btn");
-startGameButton.addEventListener('click', function() {
+    let startGameButton = document.getElementById("start-game-btn");
+    startGameButton.addEventListener('click', function() {
 
-    startGameButton.style.display = "none";
-    startTimer();
-    runGame();
+        startGameButton.style.display = "none";
+        startTimer();
+        runGame();
 
-});
+    });
 
-let checkAnswerButton = document.getElementById("check-answer-btn");
-     
+    let checkAnswerButton = document.getElementById("check-answer-btn");
+
     checkAnswerButton.addEventListener('click', function() {
-    checkAnswer();
-});
-
-document.getElementById("answer-input").addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
         checkAnswer();
-    }
-});
-  
+    });
+
+    document.getElementById("answer-input").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    });
+
+    let resetGameButton = document.getElementById("reset-btn");
+
+    resetGameButton.addEventListener('click', function() {
+        location.reload();
+    });
 
 
 })
@@ -33,8 +38,11 @@ document.getElementById("answer-input").addEventListener("keydown", function (ev
  */
 function runGame() {
 
+    startTimer();
+
+
     document.getElementById("check-answer-btn").style.display = "block";
-    
+
     generateRandomOperator();
     let generatedOperator = document.getElementById("operator").textContent;
 
@@ -84,7 +92,7 @@ function generateRandomOperator() {
     let randomNumber = Math.random();
     let randomOperator = randomNumber < 0.5 ? "+" : "*";
     document.getElementById("operator").textContent = randomOperator;
-    
+
     return randomOperator;
 }
 
@@ -93,19 +101,19 @@ function generateRandomOperator() {
  * Calculates correct result of the question
  */
 function calculateResult() {
-    
+
     let operand1 = parseInt(document.getElementById("operand1").textContent);
     let operator = document.getElementById("operator").textContent;
     let operand2 = parseInt(document.getElementById("operand2").textContent);
-        
+
     let result;
-        
+
     if (operator === "+") {
         result = operand1 + operand2;
     } else if (operator === "*") {
         result = operand1 * operand2;
     }
-        
+
     return result;
 }
 
@@ -116,7 +124,7 @@ function calculateResult() {
  * Sets cursor back to input field
  */
 function checkAnswer() {
-    
+
     let userAnswer = parseInt(document.getElementById("answer-input").value);
     let correctAnswer = calculateResult();
     let score = parseInt(document.getElementById("score").textContent);
@@ -138,53 +146,33 @@ function checkAnswer() {
 
     if (currentScore === 10) {
         document.getElementById("info-board").textContent = "Congratulations! You won."
-        document.getElementById("start-game-btn").style = "block";
         document.getElementById("check-answer-btn").style.display = "none";
-        restartGame();
+        document.getElementById("reset-btn").style.display = "block";
     } else {
         runGame();
     }
-    
+
 }
 
 /**
- * Sets score to 0
- * Runs runGame function to start over
+ * Starts a countdown timer for 30 seconds and displays the remaining time on the page
+ * If the timer reaches zero, the function alerts the user that time is up and calls the 'restartGame()' function
  */
-function restartGame() {
-    
-    document.getElementById("info-Board").textContent(" seconds left");
-    document.getElementById("score").textContent = "0";
-    document.getElementById("start-game").style.display = "block";
-    document.getElementById("timer").textContent = "30";
-}
-
-
-
- /**
-  * Starts a countdown timer for 30 seconds and displays the remaining time on the page
-  * If the timer reaches zero, the function alerts the user that time is up and calls the 'restartGame()' function
-  */
 function startTimer() {
-    
+
     let timeLeft = 30;
     let timerElement = document.getElementById("timer");
     timerElement.textContent = timeLeft;
-    
+
     let countdown = setInterval(function() {
-    timeLeft--;
-    timerElement.textContent = timeLeft;
+        timeLeft--;
+        timerElement.textContent = timeLeft;
 
-    if (timeLeft === 0) {
-      clearInterval(countdown);
-      document.getElementById("info-board").textContent = "Time's up! You lost.";
-      document.getElementById("start-game-btn").style = "block";
-      document.getElementById("start-game-btn").textContent = "Play again";
-
-      document.getElementById("start-game-btn").style = "block";
-      document.getElementById("check-answer-btn").style.display = "none";
-      
-      restartGame();
-    }
-  }, 1000);
+        if (timeLeft === 0) {
+            clearInterval(countdown);
+            document.getElementById("info-board").textContent = "Time's up! You lost.";
+            document.getElementById("check-answer-btn").style.display = "none";
+            document.getElementById("reset-btn").style.display = "block";
+        }
+    }, 1000);
 }
