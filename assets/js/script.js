@@ -120,6 +120,7 @@ function calculateResult() {
  * Clear input field after it
  * Sets cursor back to input field
  */
+
 function checkAnswer() {
 
     let userAnswer = parseInt(document.getElementById("answer-input").value);
