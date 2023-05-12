@@ -78,14 +78,14 @@ When implementing the reset button, I had trouble resetting the game to its init
 
 The website was deployed to Github pages. The steps were as followed:
 
-- Click on the repository of get-your-greens.
+1. Click on the repository of get-your-greens.
 
-- Click on settings.
+2. Click on settings.
 
-- Click on pages.
+3. Click on pages.
 
-- Choose to deploy from a branch, pick the main branch and save.
+4. Choose to deploy from a branch, pick the main branch and save.
 
-- The link to the site displays on the page.
+5. The link to the site displays on the page.
 
 
