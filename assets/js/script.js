@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function() {
    */
   function generateAdditionNumbers() {
   
-    aNum1 = Math.floor(Math.random() * 50) + 1;
-    aNum2 = Math.floor(Math.random() * 50) + 1;
+    let aNum1 = Math.floor(Math.random() * 50) + 1;
+    let aNum2 = Math.floor(Math.random() * 50) + 1;
   
     document.getElementById("operand1").textContent = aNum1;
     document.getElementById("operand2").textContent = aNum2;
@@ -75,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
    */
   function generateMultiplicationNumbers() {
   
-    mNum1 = Math.floor(Math.random() * 10) + 1;
-    mNum2 = Math.floor(Math.random() * 10) + 1;
+    let mNum1 = Math.floor(Math.random() * 10) + 1;
+    let mNum2 = Math.floor(Math.random() * 10) + 1;
   
     document.getElementById("operand1").textContent = mNum1;
     document.getElementById("operand2").textContent = mNum2;
