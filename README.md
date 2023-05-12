@@ -78,7 +78,7 @@ When implementing the reset button, I had trouble resetting the game to its init
 
 The website was deployed to Github pages. The steps were as followed:
 
-1. Click on the repository of get-your-greens.
+1. Click on the repository of 30 SECONDS MATHS.
 
 2. Click on settings.
 
