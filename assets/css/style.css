@@ -91,7 +91,8 @@ h1 {
     border: 0.2rem solid #333;
 }
 
-#start-game-btn {
+.btn {
+
     width: 15rem;
     height: 5rem;
     border: none;
@@ -103,6 +104,12 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
+#start-game-btn {
+
+    background-color: #0077ff;
+
+}
+
 #start-game-btn:hover {
     background-color: #005ad1;
 }
@@ -110,14 +117,6 @@ h1 {
 #check-answer-btn {
 
     display: none;
-    width: 15rem;
-    height: 5rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: #fff;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
     background-color: #333;
 }
 
@@ -128,14 +127,6 @@ h1 {
 #reset-btn {
 
     display: none;
-    width: 15rem;
-    height: 5rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: #fff;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
     background-color: #333;
 }
 
