@@ -1,3 +1,10 @@
+/**
+ * /**
+ * Adds event listeners to the start game button, check answer button, and answer input field. 
+ * Starts the game when the start game button is clicked. 
+ * Checks the user's answer when the check answer button is clicked or when the enter key is pressed. 
+ * Reloads the page when the reset game button is clicked.
+ */
 document.addEventListener("DOMContentLoaded", function() {
 
     let startGameButton = document.getElementById("start-game-btn");
