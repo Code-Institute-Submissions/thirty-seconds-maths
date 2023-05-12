@@ -20,6 +20,16 @@ The design as is clear, user-friendly, and intuitive. The well-structured arrang
 
 ### Testing
 
+#### Lighthouse
+
 I tested the website's performance, accessibility, best practices and SEO using lighthouse by chrome developer tools.
 
 ![Lighthouse performance](assets/images/lighthouse.png)
+
+#### Code Validation
+
+- I confirm that no errors occured running the HTML code through the Markup Validation Service.
+
+- I confirm that no errors occured running the CSS code through the CSS Validation Service
+
+- I can confirm that no errors occured running the JavaScript code through the JSLint tool.
