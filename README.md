@@ -45,3 +45,7 @@ I tested the website's performance, accessibility, best practices and SEO using 
 - I confirm that no errors occured running the CSS code through the CSS Validation Service
 
 - I can confirm that no errors occured running the JavaScript code through the JSLint tool.
+
+### Browser Compatibilty
+
+I confirm that the website works and looks good in the three main browsers: Google Chrome, Safari, Mozilla Firefox. Something has been noticed in the Safari browser that is mentioned in the Unsolved Bugs section.
