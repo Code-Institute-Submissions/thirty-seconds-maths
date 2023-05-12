@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     if (operator === "+") {
       result = operand1 + operand2;
-    } else if (operator === "*") {
+    } else if (operator === "x") {
       result = operand1 * operand2;
     }
   
