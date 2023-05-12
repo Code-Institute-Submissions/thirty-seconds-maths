@@ -35,7 +35,7 @@ body {
     #game-container {
         width: 75%;
     }
-    
+
 }
 
 #game-heading {
@@ -98,7 +98,6 @@ body {
 }
 
 .btn {
-
     width: 15rem;
     height: 5rem;
     border: none;
@@ -111,9 +110,7 @@ body {
 }
 
 #start-game-btn {
-
     background-color: #0077ff;
-
 }
 
 #start-game-btn:hover {
@@ -121,7 +118,6 @@ body {
 }
 
 #check-answer-btn {
-
     display: none;
     background-color: #333;
 }
@@ -131,7 +127,6 @@ body {
 }
 
 #reset-btn {
-
     display: none;
     background-color: #333;
 }
