@@ -17,3 +17,9 @@ The game starts with a start button that prompts the player to start the game. O
 For each correct answer, the player gets one point, and for each wrong answer, one point is deducted. The game ends when the player either reaches ten points or the time runs out. If the player reaches ten points, a message is displayed informing them that they have won the game. If the time runs out, the player is informed that they have lost the game.
 
 The design as is clear, user-friendly, and intuitive. The well-structured arrangement of elements and the use of a readable font make it easy for the user to read and understand the information. The color scheme and buttons are designed to be easily recognizable, and the use of animations improves the user's interaction with the application. The application is also responsive to different screen sizes, ensuring that it works well on all devices. Finally, the design is attractive and appealing, providing the user with a pleasant and positive experience.
+
+### Testing
+
+I tested the website's performance, accessibility, best practices and SEO using lighthouse by chrome developer tools.
+
+![Lighthouse performance](assets/images/lighthouse.png)
