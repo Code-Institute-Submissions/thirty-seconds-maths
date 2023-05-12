@@ -10,7 +10,7 @@ This project is a the second portfolio project of the Fullstack Software Develop
 
 ### FEATURES
 
-[Image of the application](assets/images/application-image.png)
+![Image of the application](assets/images/application-image.png)
 
 The game starts with a start button that prompts the player to start the game. Once the start button is pressed, the game begins and a random mathematical operator (addition or multiplication) is generated, followed by two operands. The player then has to input the result of the mathematical operation and click the "Check" button or press the Enter key to check the result.
 
