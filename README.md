@@ -68,5 +68,12 @@ I can confirm that the website works and looks good on all standard screen sizes
 
 When implementing the reset button, I had trouble resetting the game to its initial state. Due to time issues, I looked for a quick solution and came across the location.reload() function in JavaScript, which reloads the page and sets the game to its initial state.
 
+### Contents
+
+- The font was imported using Google Fonts
+
+- The text content was written by myself.
+
+
 
 
