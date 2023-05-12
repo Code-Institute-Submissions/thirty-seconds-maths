@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     let checkAnswerButton = document.getElementById("check-answer-btn");
-
     checkAnswerButton.addEventListener('click', function() {
         checkAnswer();
     });
@@ -29,11 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     let resetGameButton = document.getElementById("reset-btn");
-
     resetGameButton.addEventListener('click', function() {
         location.reload();
     });
-
 
 })
 
@@ -41,7 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /**
- * Runs the game
+ * Generates a random operator and numbers for the math game.
+ * Displays the check answer button for the user to check their answer.
+ * If the generated operator is "+", calls the generateAdditionNumbers() function.
+ * If the generated operator is "*", calls the generateMultiplicationNumbers() function.
  */
 function runGame() {
     
@@ -61,7 +61,8 @@ function runGame() {
 
 
 /**
- * Generates two random numbers between 1 and 50 and stores them in operand elements
+ * Generates two random numbers between 1 and 50.
+ * Updates the html elements displaying the operands.
  */
 function generateAdditionNumbers() {
 
@@ -75,7 +76,8 @@ function generateAdditionNumbers() {
 
 
 /**
- * Generates two random numbers between 1 and 10 and stores them in operand elements 
+ * Generates two random numbers between 1 and 50.
+ * Updates the html elements displaying the operands.
  */
 function generateMultiplicationNumbers() {
 
@@ -88,15 +90,25 @@ function generateMultiplicationNumbers() {
 }
 
 
+
 /**
- * Generates either "+" or "-"
+ * Generates a random operator, either + or *, and sets it as the text content of the HTML element with ID 'operator'.
+ * Returns randomOperator.
  */
 function generateRandomOperator() {
 
     let randomNumber = Math.random();
     let randomOperator = randomNumber < 0.5 ? "+" : "*";
-    document.getElementById("operator").textContent = randomOperator;
 
+    switch(randomOperator) {
+        case "+":
+            document.getElementById("operator").textContent = "+";
+            break
+        case "*":
+            document.getElementById("operator").textContent = "x";
+            break
+    }
+    
     return randomOperator;
 }
 
