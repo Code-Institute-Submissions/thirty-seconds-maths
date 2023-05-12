@@ -18,6 +18,18 @@ For each correct answer, the player gets one point, and for each wrong answer, o
 
 The design as is clear, user-friendly, and intuitive. The well-structured arrangement of elements and the use of a readable font make it easy for the user to read and understand the information. The color scheme and buttons are designed to be easily recognizable, and the use of animations improves the user's interaction with the application. The application is also responsive to different screen sizes, ensuring that it works well on all devices. Finally, the design is attractive and appealing, providing the user with a pleasant and positive experience.
 
+### Development
+
+- Gitpod was used as the Integrated Development Environment.
+
+- Hypertext Markup Language was used to describe the content of the website.
+
+- Cascading Stylesheets were used to style the content on the website.
+
+- JavaScript was used to add functionality to the game
+
+- The version control software GIT was used during the development process.
+
 ### Testing
 
 #### Lighthouse
