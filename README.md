@@ -62,5 +62,11 @@ I can confirm that the website works and looks good on all standard screen sizes
 - I confirm that if the user scores 10 points before he runs out of time, he gets a message telling him he won the game. He also has the option to reset the game using the "Reset" button.
 - I confirm that the "Reset" button reloads the page and the user can start over again.
 
+### Bugs
+
+#### Fixed Bugs
+
+When implementing the reset button, I had trouble resetting the game to its initial state. Due to time issues, I looked for a quick solution and came across the location.reload() function in JavaScript, which reloads the page and sets the game to its initial state.
+
 
 
