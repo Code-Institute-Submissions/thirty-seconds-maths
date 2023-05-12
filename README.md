@@ -54,3 +54,13 @@ I confirm that the website works and looks good in the three main browsers: Goog
 
 I can confirm that the website works and looks good on all standard screen sizes using the chrome developer tools. In additon, the websites responsiveness was tested on an IPhone 12 Pro and a MacBook Air.
 
+#### Features
+
+- I confirm that that the "Start Game" button starts the clock and the "Check Answer" button is shown.
+- I confirm that after clicking the "Check Answer" button, the score either increases or descreases, depending on the user's solution.
+- I confirm that if the time runs out, the user gets a message telling him he lost the game. He also has the option to reset the game using the "Reset" button.
+- I confirm that if the user scores 10 points before he runs out of time, he gets a message telling him he won the game. He also has the option to reset the game using the "Reset" button.
+- I confirm that the "Reset" button reloads the page and the user can start over again.
+
+
+
