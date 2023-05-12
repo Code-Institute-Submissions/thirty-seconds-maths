@@ -95,10 +95,10 @@ document.addEventListener("DOMContentLoaded", function() {
     switch (randomOperator) {
       case "+":
         document.getElementById("operator").textContent = "+";
-        break
+        break;
       case "*":
         document.getElementById("operator").textContent = "x";
-        break
+        break;
     }
   
     return randomOperator;
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     if (currentScore === 10) {
       clearInterval(countdown);
-      document.getElementById("info-board").textContent = "Congratulations! You won."
+      document.getElementById("info-board").textContent = "Congratulations! You won.";
       document.getElementById("check-answer-btn").style.display = "none";
       document.getElementById("reset-btn").style.display = "block";
     } else {
